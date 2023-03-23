@@ -1,0 +1,258 @@
+:root {
+  font-size: 62.5%;
+  --purple: #6246ea;
+  --heading: #121214;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+
+  font-family: 'Roboto', sans-serif; /* fonte geral */
+  -webkit-font-smoothing: antialiased; /* deixa o contorno da fonte mais suave */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fffffe;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
+  max-width: 24ch;
+  margin: 1.8rem auto 4rem;
+  font-size: clamp(2rem, 1.1704rem + 2.5926vw, 4.8rem);
+}
+
+h1 > span {
+  color: var(--purple);
+}
+
+header {
+  text-align: center;
+  background-color: #f8f8ff;
+  padding-block: min(8vw, 100px);
+
+  background-image: url('./assets/ilustra-01.svg'), url('assets/ilustra-02.svg');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: min(40vw, 407px), min(40vw, 414px);
+}
+
+header > span {
+  color: #e45858;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+form {
+  background-color: #fff;
+
+  width: min(90%, 993px);
+  margin: 0 auto;
+  padding: clamp(2rem, 1.0588rem + 2.9412vw, 4rem);
+  border: 1px solid #eaeaea;
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 2.4rem;
+}
+
+form label {
+  background-color: #f4f4ff;
+
+  padding: 1.2rem 1.4rem;
+  border-radius: 5px;
+
+  display: flex;
+}
+
+form input,
+form select {
+  font-weight: 400;
+
+  background-color: transparent;
+  color: #7c7c8a;
+
+  width: 100%;
+  margin-left: 1.2rem;
+  border: none;
+  font-size: clamp(1.2rem, 1.0118rem + 0.5882vw, 1.6rem);
+}
+
+form button {
+  background-color: #6246ea;
+  color: #fff;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-block: 1.2rem;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+main {
+  width: min(95%, 1216px);
+  padding-block: min(7vw, 100px);
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 0rem + 5vw, 3.2rem);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+section > div > div {
+  border: 1px solid #eaeaea;
+  border-radius: 0.6rem;
+  width: fit-content;
+  padding: 0.8rem;
+}
+
+label {
+  cursor: pointer;
+  color: #6246ea;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  padding: 0.4rem 2.4rem;
+  border-radius: 5px;
+}
+
+input:checked + label {
+  background-color: #6246ea;
+  color: #fff;
+}
+
+input:focus + label {
+  outline: 1px solid black;
+}
+
+article {
+  display: grid;
+  gap: clamp(1.2rem, 0.6286rem + 1.7857vw, 3.2rem);
+  grid-template-columns: repeat(auto-fit, minmax(32.7625rem, 1fr));
+}
+
+.card {
+  background-color: #fff;
+
+  border: 1px solid #eaeaea;
+  border-radius: 1rem;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card > div:first-child {
+  height: 15.3rem;
+  overflow: hidden;
+}
+
+.card > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms;
+}
+
+.card > div:last-child {
+  color: #000000bf;
+
+  padding: clamp(1.2rem, 0.8rem + 1.25vw, 1.6rem);
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.2rem, 0.8rem + 1.25vw, 1.6rem);
+}
+
+.card h3 {
+  font-size: clamp(1.4rem, 0.8rem + 1.875vw, 2rem);
+}
+
+.card p,
+.card span {
+  font-size: clamp(1.2rem, 0.8rem + 1.25vw, 1.6rem);
+}
+
+.card p {
+  max-width: 38ch;
+}
+
+.card span {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card span svg {
+  width: clamp(1.6rem, 0.8rem + 2.5vw, 2.4rem);
+}
+
+@media (max-width: 440px) {
+  section > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="card small" id="NPS">
+          <h1>NPS geral</h1>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+            <h2>Excelente!</h2>
+          </div>
+          <footer>
+            <p>NPS Score</p>
+            <span>75</span>
+          </footer>
+        </div>
+        <div class="card small" id="sales">
+          <h1>Vendas fechadas</h1>
+          <img src="./assets/ellipse1.svg" />
+          <footer>
+            <div>
+              <p>Esperado</p>
+              <span>100</span>
+            </div>
+            <div>
+              <p>Alcançado</p>
+              <span>70</span>
+            </div>
+          </footer>
+        </div>
+        <div class="card small" id="goals">
+          <h1>Meta mensal</h1>
+          <img src="./assets/ellipse2.svg" />
+          <footer>
+            <div>
+              <p>Esperado</p>
+              <span>R$ 70K</span>
+            </div>
+            <div>
+              <p>Alcançado</p>
+              <span>R$ 63K</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="card big">
+        <div id="info">
+          <h1>Vendas por dia da semana</h1>
+          <div>
+            <h2>
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.5 0.5L12.9952 11.75H0.00480938L6.5 0.5Z"
+                  fill="url(#paint0_linear_201_16)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_201_16"
+                    x1="6.5"
+                    y1="0.5"
+                    x2="6.5"
+                    y2="15.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#81FBB8" />
+                    <stop offset="1" stop-color="#28C76F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Dia com mais vendas
+            </h2>
+            <h3>quarta-feira</h3>
+          </div>
+          <div>
+            <h2>
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.5 11.5L12.9952 0.25H0.00480938L6.5 11.5Z"
+                  fill="url(#paint0_linear_201_24)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_201_24"
+                    x1="6.5"
+                    y1="11.5"
+                    x2="6.5"
+                    y2="-3.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EA5455" />
+                    <stop offset="1" stop-color="#FEB692" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Dia com menos vendas
+            </h2>
+            <h3>domingo</h3>
+          </div>
+        </div>
+        <img src="./assets/column.svg" />
+      </div>
+    </main>
+  </body>
+</html>

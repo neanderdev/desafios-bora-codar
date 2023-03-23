@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Conversor de moedas</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h1>Conversor de moedas</h1>
+          <div id="conversion">
+            <div class="input-wrapper">
+              <div>
+                <span>$</span>
+                <input type="number" min="0" />
+              </div>
+              <div class="select">
+                <div class="selected">
+                  <img
+                    src="./assets/flag-usd.png"
+                    alt="Bandeira dos estados unidos"
+                  />
+                  <span>USD</span>
+                </div>
+                <ul>
+                  <li>
+                    <img
+                      src="./assets/flag-usd.png"
+                      alt="Bandeira dos estados unidos"
+                    />
+                    <span>USD</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-brl.png" alt="Bandeira do Brasil" />
+                    <span>BRL</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-eur.png" alt="Bandeira Europeia" />
+                    <span>EUR</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/flag-gbp.png"
+                      alt="Bandeira do Reino Unido"
+                    />
+                    <span>GBP</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-chf.png" alt="Bandeira da Suíça" />
+                    <span>CHF</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-jpy.png" alt="Bandeira dO Japão" />
+                    <span>JPY</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button>
+              <img
+                src="./assets/arrows.svg"
+                alt="Botão para alternar conversão"
+              />
+            </button>
+            <div class="input-wrapper">
+              <div>
+                <span>$</span>
+                <input type="number" min="0" readonly />
+              </div>
+              <div class="select">
+                <div class="selected">
+                  <img
+                    src="./assets/flag-usd.png"
+                    alt="Bandeira dos estados unidos"
+                  />
+                  <span>USD</span>
+                </div>
+                <ul>
+                  <li>
+                    <img
+                      src="./assets/flag-usd.png"
+                      alt="Bandeira dos estados unidos"
+                    />
+                    <span>USD</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-eur.png" alt="Bandeira Europeia" />
+                    <span>EUR</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/flag-gbp.png"
+                      alt="Bandeira do Reino Unido"
+                    />
+                    <span>GBP</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-chf.png" alt="Bandeira da Suíça" />
+                    <span>CHF</span>
+                  </li>
+                  <li>
+                    <img src="./assets/flag-jpy.png" alt="Bandeira dO Japão" />
+                    <span>JPY</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <section class="cambio">
+        <h1>Taxa de câmbio</h1>
+        <div class="wrapper">
+          <div id="chart"></div>
+          <div class="chart-controls">
+            <button>1D</button>
+            <button>5D</button>
+            <button class="active">1M</button>
+            <button>1A</button>
+            <button>5A</button>
+            <button>Máx</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

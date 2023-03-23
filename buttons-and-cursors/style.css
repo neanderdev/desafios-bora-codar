@@ -1,0 +1,302 @@
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #0b0911;
+  --text-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+  color: var(--text-color);
+  font-size: 1.6rem;
+
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+
+  padding: 5vw 0 0 3vw;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+h1,
+h2,
+button {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  line-height: 100%;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 1.2rem + 3.125vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(2.2rem, -24.4531rem + 20.4082vw, 3.2rem);
+}
+
+p {
+  font-size: clamp(1.3rem, 0.7rem + 1.875vw, 1.9rem);
+  font-weight: 400;
+  line-height: 2.3rem;
+
+  max-width: 71ch;
+  opacity: 0.67;
+
+  margin-top: 0.8rem;
+}
+
+p strong {
+  font-weight: 700;
+  color: red;
+}
+
+main {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.wrapper-table {
+  background-color: #1c162c;
+
+  width: 928.5px;
+  border-radius: 0.8rem;
+  padding: 2.4rem 0.6rem 0.6rem 2.4rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:not(tr:first-of-type) {
+  background-color: #0b0911;
+  cursor: pointer;
+}
+
+tr:hover td {
+  background-color: #ffffff28;
+}
+
+th {
+  background-color: #1c162c;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+tr:first-child th {
+  padding-bottom: 2.4rem;
+}
+
+tr:not(tr:first-child) th {
+  padding-right: 2.4rem;
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.4rem;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin: 0 auto;
+}
+
+table button {
+  cursor: pointer;
+}
+
+td {
+  padding: 1.6rem;
+}
+
+td:first-of-type {
+  padding-left: 3.2rem;
+}
+
+tr:nth-child(2) td {
+  padding-top: 3.2rem;
+}
+tr:last-child td {
+  padding-bottom: 3.2rem;
+}
+
+.primary {
+  background-color: #8257e5;
+}
+
+.secondary {
+  background-color: #3c3748;
+}
+
+.tertiary {
+  background-color: transparent;
+}
+
+tr:nth-child(3) .primary {
+  background-color: #9674e6;
+}
+
+tr:nth-child(3) .secondary {
+  background-color: #6a617f;
+}
+
+tr:nth-child(4) .primary,
+tr:nth-child(4) .secondary,
+tr:nth-child(4) .tertiary {
+  outline: 2px solid #d9cdf7;
+}
+
+.focus:focus {
+  outline: 2px solid #d9cdf7;
+
+}
+
+
+.disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+}
+
+table .disabled {
+  cursor: initial;
+}
+
+button svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+button.loading {
+  cursor: wait;
+}
+
+button.hover {
+  transition: background-color 300ms;
+}
+
+button.movable {
+  cursor: move;
+}
+
+
+button.primary.hover:hover {
+  background-color: #9674E5;
+}
+
+
+button.secondary.hover:hover {
+  background-color: #6A617F;
+}
+
+aside {
+  background-color: #130f1e;
+  max-width: 406px;
+  padding-top: 5vw;
+  padding-inline: clamp(1.4rem, -78.5592rem + 61.2245vw, 4.4rem);
+  margin-top: -5vw;
+}
+
+aside p {
+  max-width: 30ch;
+  font-size: clamp(1.3rem, -14.6918rem + 12.2449vw, 1.9rem);
+}
+
+aside div {
+  margin-top: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+aside button {
+  width: 100%;
+}
+
+aside button {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1250px) {
+  main > div {
+    margin: 0 auto;
+  }
+  aside {
+    text-align: center;
+
+    max-width: none;
+    width: 100%;
+
+    margin: 0;
+
+    margin-bottom: 2rem;
+  }
+
+  aside button {
+    width: initial;
+  }
+
+  aside div {
+    margin-top: 6rem;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 1.2rem + 3.125vw, 3.2rem);
+  }
+
+  aside p {
+    max-width: none;
+    font-size: clamp(1.3rem, 0.7rem + 1.875vw, 1.9rem);
+  }
+
+  body {
+    display: block;
+    padding-right: 3vw;
+  }
+}
