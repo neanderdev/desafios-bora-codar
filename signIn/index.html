@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css"/>    
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="page" class="flex">
+        <div>
+            <header>
+                <img 
+                    src="./assets/logo.svg" 
+                    alt="Logo"
+                />
+            </header>
+
+            <main>
+                <div class="headline">
+                    <h1>
+                        Acesse a plataforma
+                    </h1>
+
+                    <p>
+                        Faça login ou registre-se para começar a construir seus projetos ainda hoje
+                    </p>
+                </div>
+
+                <form>
+                    <div class="input-wrapper">
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input 
+                            id="email" 
+                            type="email"
+                            name="email"                             
+                            placeholder="Digite seu e-mail"                            
+                            required 
+                        />
+
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <div class="label-wrapper flex">
+                            <label for="password">
+                                Senha
+                            </label>
+
+                            <a href="#">
+                                Esqueceu a senha?
+                            </a>
+                        </div>
+
+                        <input 
+                            id="password" 
+                            type="password"
+                            name="password" 
+                            placeholder="Digite sua senha"
+                            required 
+                        />
+
+                        <img 
+                            class="eye"
+                            src="./assets/show.svg" 
+                            alt="Show Password" 
+                            onclick="togglePassword()"
+                        />
+
+                        <img 
+                            class="eye hide"
+                            src="./assets/hidden.svg" 
+                            alt="Hidden Password" 
+                            onclick="togglePassword()"
+                        />
+
+                        <span class="error-message"></span>
+                    </div>
+
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                    <div class="create-account">
+                        Ainda não tem conta? 
+
+                        <a href="#">
+                            Inscreva-se
+                        </a>
+                    </div>
+                </form>
+            </main>
+        </div>
+
+        <img 
+            src="./assets/bg.svg" 
+            alt="Background"
+        />
+    </div>
+
+    <script>
+        function togglePassword() {
+            document.querySelectorAll(".eye")
+                .forEach((eye) => eye.classList.toggle("hide"))
+           
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+
+            password.setAttribute("type", type);
+        }
+
+        const fields = document.querySelectorAll("[required]");
+
+        function validateField(field) {
+            // lógica para verificar se existem erros
+            function verifyErrors() {
+                let foundError = false;
+
+                for (let error in field.validity) {                   
+                    if (field.validity[error] && !field.validity.valid) {
+                        foundError = error;
+                    }
+                }
+
+                return foundError;
+            }
+
+            function customMessage(typeError) {
+                const messages = {
+                    email: {
+                        valueMissing: "Digite seu e-mail",
+                        typeMismatch: "Digite um e-mail válido",
+                    },
+                    password: {
+                        valueMissing: "Digite sua senha",
+                    },
+                };
+
+                return messages[field.name][typeError]
+            }
+            
+            function setCustomMessage(message) {
+                const spanError = field.parentNode.querySelector("span.error-message");                            
+
+                if (message) {
+                    spanError.innerHTML = message;
+                    field.setAttribute("class", "error");
+                } else {
+                    spanError.innerHTML = "";
+                    field.setAttribute("class", "");
+                }
+            }                 
+
+            return function () {
+                const error = verifyErrors();                
+
+                if (error) {
+                    const message = customMessage(error);
+
+                    setCustomMessage(message);
+                } else {
+                    setCustomMessage();
+                }
+            }
+        }
+
+        function customValidation(event) {
+            const field = event.target;
+
+            const validation = validateField(field);
+
+            validation();
+        }
+        
+        for (field of fields) {
+            field.addEventListener("invalid", (event) => {
+                // eliminar o bubble
+                event.preventDefault();
+
+                customValidation(event);
+            });
+            field.addEventListener("blur", customValidation);
+        }
+    </script>
+</body>
+</html>
