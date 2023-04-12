@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css"/>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./script.js" defer></script>
+
+    <title>Formulário de Cartão de Crédito</title>
+</head>
+<body>
+    <form>
+        <section id="credit-card">
+          <div class="front"></div>
+
+          <div class="back"></div>
+        </section>
+
+        <section class="inputs flex">
+          <div class="input-wrapper">
+            <label for="cc-number">Número do cartão</label>
+
+            <input type="text" id="cc-number" placeholder="**** **** **** ****" required />
+
+            <div class="warning">
+              <img src="assets/warning.png" alt="Ícone de alerta" />
+
+              Insira um número de cartão válido
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cc-holder">Nome do titular</label>
+
+            <input type="text" id="cc-holder" placeholder="Nome como está no cartão" required />
+
+            <div class="warning">
+                
+              <img src="assets/warning.png" alt="Ícone de alerta" />
+
+              Nome do titular é obrigatório
+            </div>
+          </div>
+
+          <div class="col-2 flex">
+            <div class="input-wrapper">
+              <label for="cc-validity">Validade</label>
+
+              <input type="text" id="cc-validity" placeholder="mm/aa" required />
+
+              <div class="warning">
+                <img src="assets/warning.png" alt="Ícone de alerta" />
+
+                Insira um valor válido
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="cc-cvv" class="flex help">
+                CVV
+
+                <img
+                  src="assets/question.png"
+                  alt="Ícone de ajuda"
+                  title="Esse número está, nas costas do seu cartão"
+                />
+              </label>
+
+              <input type="text" id="cc-cvv" placeholder="***" required />
+
+              <div class="warning">
+                <img src="assets/warning.png" alt="Ícone de alerta" />
+
+                Insira um número válido
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-security flex">
+          <img src="assets/shield-check.png" alt="Ícone de segurança" />
+
+          Seus dados estão seguros
+        </section>
+        
+        <button>Adicionar cartão</button>
+      </form>
+</body>
+</html>
