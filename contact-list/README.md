@@ -1,6 +1,6 @@
 # SignIn
 
-Desafio `15` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de tabela de preço. 
+Desafio `16` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de tabela de preço. 
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -23,7 +23,6 @@ Desafio `15` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
-- Animação com CSS
 - Git e Github
 - Figma
 
