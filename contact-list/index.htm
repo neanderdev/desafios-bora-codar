@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />    
+
+    <title>Lista de Contato</title>
+</head>
+<body>
+    <header class="container">
+        <nav class="flex items-center">
+            <h2>Meus contatos</h2>
+
+            <ul class="flex">
+                <li>
+                    <ion-icon name="add"></ion-icon>
+                </li>
+    
+                <li>
+                    <ion-icon name="pencil"></ion-icon>
+                </li>
+    
+                <li>
+                    <ion-icon name="trash"></ion-icon>
+                </li>
+            </ul>
+        </nav>
+
+        <form>
+            <div class="input-wrapper flex items-center">
+                <label class="sr-only" for="filter">
+                    Busque por nome ou dados de contato
+                </label>
+
+                <ion-icon name="search-outline"></ion-icon>
+
+                <input 
+                    id="flter"
+                    type="text"
+                    placeholder="Busque por nome ou por dados do contato..."
+                />
+            </div>
+        </form>
+    </header>
+
+    <section class="contacts container">
+        <div class="list-wrapper flex">
+            <div class="letter purple">A</div>
+
+            <ul>
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/men/5.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Abraão</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-wrapper flex">
+            <div class="letter green">B</div>
+
+            <ul>
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/women/5.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Beatriz</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/women/6.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Brenda</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-wrapper flex">
+            <div class="letter pink">C</div>
+
+            <ul>
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/men/6.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Caio</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/men/7.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Lucas</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-wrapper flex">
+            <div class="letter blue">D</div>
+
+            <ul>
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/women/8.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Daniela</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="person flex">
+                        <img 
+                            src="https://randomuser.me/api/portraits/women/9.jpg" 
+                            alt="Imagem do usuário" 
+                        />
+
+                        <div class="contact">
+                            <h3>Daniela</h3>
+
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

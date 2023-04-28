@@ -1,6 +1,6 @@
 # SignIn
 
-Desafio `16` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de lista de contatos. 
+Desafio `15` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de tabela de preço. 
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -15,7 +15,7 @@ Desafio `16` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de
 <br>
 
 <p align="center">
-  <img alt="Imagem da página de lista de contatos" src="./.github/preview.png" width="100%">
+  <img alt="Imagem da página de tabela de preço" src="./.github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -23,13 +23,14 @@ Desafio `16` do [#boraCodar](https://boracodar.dev/). Desenvolver uma página de
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
+- Animação com CSS
 - Git e Github
 - Figma
 
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1230513627011474566/%23boraCodar---Desafio-16). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1227809985897425342/%23boracodar---Desafio-15). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
