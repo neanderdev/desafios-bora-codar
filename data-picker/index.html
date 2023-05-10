@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="script.js" defer></script>
+
+    <title>Data Picker</title>
+</head>
+<body>
+    <div id="app" class="box">
+        <header>
+            <i class="ph-bold ph-caret-left" onclick="handlePreviousYear()"></i>
+
+            <span></span>
+
+            <i class="ph-bold ph-caret-right" onclick="handleNextYear()"></i>
+        </header>
+
+        <main></main>
+    </div>
+</body>
+</html>

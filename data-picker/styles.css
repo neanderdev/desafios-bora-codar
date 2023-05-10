@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased; /* deixa o contorno da fonte mais suave */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  padding: 32px;
+
+  background-color: #fff;
+  box-shadow: 0px 8px 32px rgba(0 0 0 / 0.16);
+
+  border-radius: 16px;
+
+  width: fit-content;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  gap: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 700;
+
+  color: #333;
+}
+
+header i {
+  padding: 16px;
+
+  border-radius: 50%;
+
+  color: #666;
+
+  cursor: pointer;
+}
+
+header i:hover {
+  background-color: #ece0fd;
+}
+
+.month {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.month > div {
+  width: 82px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #666;
+
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+
+.month > div:hover {
+  background-color: #ece0fd;
+  border-radius: 8px;
+}
+
+.month > div.active {
+  background-color: #6200ee;
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  color: white;
+
+  position: relative;
+}
+
+.month > div.active::after {
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  background-color: white;
+  border-radius: 50%;
+
+  position: absolute;
+
+  bottom: 6px;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.week > div {
+  width: 40px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+
+  color: #666;
+}
+
+.week > div.day {
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+
+.week > .day.current {
+  opacity: 0.5;
+}
+
+.week > .day:hover {
+  background-color: #ece0fd;
+  border-radius: 8px;
+}
+
+.week > .day.selected {
+  background-color: #6200ee;
+  color: white;
+}
+
+.week > .day.selected:hover {
+  background-color: #6200ee;
+  border-radius: 0px;
+}
