@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #121214;
+
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.card {
+  flex-direction: column;
+  gap: 96px;
+
+  padding: 24px 56px;
+
+  border-radius: 40px;
+
+  background-color: white;
+
+  max-width: 795px;
+}
+
+/* drag */
+.card-drag {
+  width: 168px;
+  height: 18px;
+
+  background: #e5d8ea;
+
+  margin-inline: auto;
+
+  border-radius: 999px;
+}
+
+/* card header */
+.card-header h1 {
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #372d3b;
+}
+
+.card-header h1 span {
+  color: #864293;
+}
+
+.card-header p {
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #372d3b;
+}
+
+/* card-body */
+.card-body {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body .left {
+  align-items: center;
+}
+
+/* driver */
+.driver {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+.driver-avatar img {
+  width: 138px;
+  height: 138px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.driver-stars {
+  justify-content: center;
+  align-items: center;
+
+  color: #fbf8fc;
+  background: #372d3b;
+
+  border-radius: 999px;
+
+  width: 100px;
+  height: 32px;
+
+  gap: 10px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  margin-top: -32px;
+}
+
+.driver-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #372d3b;
+
+  margin-top: 6px;
+}
+
+/* car */
+.car-img {
+  margin-left: -50px;
+}
+
+.car-plate {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+
+  color: #372d3b;
+}
+
+.car-model {
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #372d3b;
+
+  margin-top: 12px;
+}
+
+/* card-footer */
+.card-footer {
+  gap: 32px;
+
+  align-items: center;
+}
+
+.input-wrapper {
+  background: #f5edf7;
+
+  border-radius: 24px;
+
+  height: 64px;
+
+  flex: 3;
+  align-items: center;
+
+  padding: 0 32px;
+}
+
+.input-wrapper label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  border-width: 0;
+
+  white-space: nowrap;
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  border: 0;
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #372d3b;
+}
+
+.input-wrapper input:focus {
+  outline: 0;
+}
+
+.input-wrapper:focus-within {
+  outline: 4px solid black;
+}
+
+.card-footer .ph-fill {
+  font-size: 56px;
+}
