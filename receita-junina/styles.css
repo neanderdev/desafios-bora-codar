@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #feece0;
+
+  overflow: hidden;
+
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 56px;
+
+  margin: 15px;
+}
+
+.top h1 {
+  font-size: 72px;
+  color: #58190a;
+}
+
+.top p {
+  font-size: 38px;
+  color: #58190a;
+}
+
+picutre img {
+  width: 409px;
+  height: 293px;
+}
+
+.info p {
+  padding: 30px 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons span,
+.buttons p {
+  font-size: 35px;
+  color: #9b6647;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.bottom {
+  background-color: #9b6647;
+
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+
+  padding: 30px;
+
+  height: 100vh;
+
+  color: #feece0;
+}
+
+ul,
+ol {
+  padding-left: 28px;
+}
+
+li {
+  font-size: 28px;
+  font-family: "Source Serif 4", sans-serif;
+}
+
+.col1 > div,
+.col2 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 35px;
+}
+
+.col1 h1,
+.col2 h1 {
+  font-size: 38px;
+}
